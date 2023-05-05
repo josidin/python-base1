@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""
+Hello Worl Multi Linguas.
+
+This is my first scritp , depending on the language enviroment, show 
+the message im acording to the language.
+
+usage:
+
+ To Have a variável LANG devidamente configurada ex:
+
+           export LANG=pt_BR
+
+Execução :
+
+          python3 hello.py
+          ou
+          ./hello.py
+"""
+__versinon__ = "0.0.1" 
+__author__ = "Jossidini Alves dos Santo"
+__license__ = "Unlicense" 
+
+import os
+
+current_language = os.getenv ("LANG", "en_US")[:5]
+
+msg = "hello, World!"
+
+if current_language == "pt_BR":
+    msg = "Olá, Mundo!"
+
+elif current_language == "it_IT":
+    msg = "Ciao, Mondo!"
+
+elif current_language == "fr_FR":
+    msg = "Bonjour Monde"
+
+print(msg)
+
+
+
+
